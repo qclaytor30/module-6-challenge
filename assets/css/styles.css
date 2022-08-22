@@ -1,0 +1,32 @@
+a {
+    color: rgb(157, 159, 174);
+    font-size: 100px;
+    text-decoration: none;
+}
+
+#nav {
+    padding: 10px;
+    justify-content: center;
+
+}
+
+#row1 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+}
+
+.form-inline {
+    padding-bottom: 10px;
+    padding-left: 30px;
+}
+
+#lastSearch {
+    padding-left: 35px;
+    margin-bottom: 30px;
+}
+
+#weatherCard {
+    padding-top: 43.5px;
+    padding-bottom: 30px;
+}
