@@ -26,7 +26,7 @@
     <nav class="navbar navbar-light bg-light" id="nav">
         <a href="./index.html">Weather Dashboard</a>
     </nav>
-
+    <!--container-->
     <div class="container-fluid bg-white">
         <div class="row">
             <div class="col-sm-4">
@@ -40,6 +40,7 @@
                         <button class="btn btn-outline-dark my-3" type="submit"><i
                                 class="fa-solid fa-bolt-lightning"></i></button>
                     </form>
+
                     <div class="row" id="lastSearch">
                         <div class="card" style="width:20rem;">
                             <ul class="list-group list-group-flush">
@@ -55,91 +56,49 @@
             <div class="col-lg-8">
                 <div class="row" id="weatherCard">
                     <div class="card" style="width: 98%;">
-                        <div class="card-body">
-                            <h2 class="card-title" id="searchResults"> Search Results</h2>
-                            <p class="card-text" id="tempResult">temp</p>
-                            <p class="card-text" id="humidityResult">humidity</p>
-                            <p class="card-text" id="windResult">wind</p>
-                            <p class="card-text" id="UVResult">UV</p>
-                        </div>
-                    </div>
-                </div>
-<!--Week Forecast-->
-                <div class="row" id="rowWeekDay">
-                    <h2>5-Day Forecast:</h2>
-                </div>
-                <div class="row" id="rowCards">
-                    <div class="col-2">
-                        <div class="card text-light bg-primary mb-3" style="max-width: 18rem;">
-                            <div class="card-body">
-                                <h4 class="card-title">Date</h4>
-                                <img>
-                                <p class="card-text">Temp:</p>
-                                <p class="card-text">Humidity</p>
+                            <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="card-body" id="card">
+                                                    <h2 class="card-title" id="cityResult"></h2>
+                                                    <p class="card-text" id="tempResult"></p>
+                                                    <p class="card-text" id="humidityResult"></p>
+                                                    <p class="card-text" id="windResult"></p>
+                                                </div>
+                        
+                                            </div>
+                                                <div class="col-lg-4" id="mainIcon">
+                                                    <!-- Main Icon -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 5 Day Forecast -->
+                                    <div class="row" id="row5day">
+                                        <h2 class="forecast">5-Day Forecast:</h2>
+                                    </div>
+                                    <div class="row" id="rowCards">
+                                        <!-- Cards Goes Here -->
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-2">
-                        <div class="card text-light bg-primary mb-3" style="max-width: 18rem;">
-                            <div class="card-body">
-                                <h4 class="card-title">Date</h4>
-                                <img>
-                                <p class="card-text">Temp:</p>
-                                <p class="card-text">Humidity</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-2">
-                        <div class="card text-light bg-primary mb-3" style="max-width: 18rem;">
-                            <div class="card-body">
-                                <h4 class="card-title">Date</h4>
-                                <img>
-                                <p class="card-text">Temp:</p>
-                                <p class="card-text">Humidity</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-2">
-                        <div class="card text-light bg-primary mb-3" style="max-width: 18rem;">
-                            <div class="card-body">
-                                <h4 class="card-title">Date</h4>
-                                <img>
-                                <p class="card-text">Temp:</p>
-                                <p class="card-text">Humidity</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-2">
-                        <div class="card text-light bg-primary mb-3" style="max-width: 18rem;">
-                            <div class="card-body">
-                                <h4 class="card-title">Date</h4>
-                                <img>
-                                <p class="card-text">Temp:</p>
-                                <p class="card-text">Humidity</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                        
+            <footer>
 
-        </div>
-    </div>
-<footer>
-    
-</footer>
-    <!--jQuery-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <!--bootsrap js-->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-    <!--moment js-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <!--JavaScript-->
-    <script src="./assets/js/script.js"></script>
+            </footer>
+            <!--jQuery-->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+                integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+                crossorigin="anonymous"></script>
+            <!--bootsrap js-->
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+                integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+                crossorigin="anonymous"></script>
+            <!--moment js-->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+            <!--JavaScript-->
+            <script src="./assets/js/script.js"></script>
 </body>
 
 </html>

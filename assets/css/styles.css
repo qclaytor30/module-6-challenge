@@ -28,6 +28,7 @@ a {
 
 #weatherCard {
     padding-top: 43.5px;
+    display: none;
     padding-bottom: 30px;
 }
 
@@ -35,8 +36,17 @@ a {
     padding-bottom: 30px;
 }
 
+.forecast {
+    display: none;
+}
 
 
 .container-fluid {
     padding-bottom: 50px;
+    height: 500px;
+}
+
+footer {
+    text-align: center;
+    clear: both;
 }
