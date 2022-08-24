@@ -12,9 +12,10 @@ var forecastDate = {};
 var forecastIcon = {};
 var forecastTemp = {};
 var forecastHum = {};
+var forecastWind = {};
 
 var today = moment().format('MM' + "/" + 'DD' + "/" + 'YYYY');
-var APIKey = "&units=metric&APPID=123babda3bc150d180af748af99ad173";
+var APIKey = "&units=imperial&APPID=123babda3bc150d180af748af99ad173";
 var url = "http://api.openweathermap.org/data/2.5/weather?q=";
 
 var citiesArray = JSON.parse(localStorage.getItem("Saved City")) || [];
@@ -41,14 +42,14 @@ var temp = response.main.temp;
 var lon = response.coord.lon;
 var lat = response.coord.lat;
 var icon = response.weather[0].icon;
-var UVindexURL = "http://api.openweathermap.org/data/2.5/uvi?" + "lat=" + lat + "&" + "lon=" + lon + "&APPID=123babda3bc150d180af748af99ad173";
+var UVindexURL = "https://api.openweathermap.org/data/2.5/uvi?" + "lat=" + lat + "&" + "lon=" + lon + "&APPID=123babda3bc150d180af748af99ad173";
 var newImgMain = $("<img>").attr("class", "card-img-top").attr("src", "https://openweathermap.org/img/wn/" + icon + "@2x.png");
         mainIcon.append(newImgMain);
 
         cityResultText.text(cityInfo + ", " + country + " " + today);
         windResultText.text("Wind Speed: " + wind + " MPH");
-        humidityResult.text("Humidity: " + humidity + " %");
-        tempResultText.text("Temperature: " + temp + " ºC");
+        humidityResultText.text("Humidity: " + humidity + " %");
+        tempResultText.text("Temperature: " + temp + " ºF");
 
         $.ajax({
             url: UVindexURL,
@@ -78,7 +79,7 @@ function forecast(userInput) {
     dayForecast.empty();
     rowCards.empty();
     var fore5 = $("<h2>").attr("class", "forecast").text("5-Day Forecast: ");
-    var forecastURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + userInput + "&units=metric&APPID=123babda3bc150d180af748af99ad173";
+    var forecastURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + userInput + "&units=imperial&APPID=123babda3bc150d180af748af99ad173";
     $.ajax({
         url: forecastURL,
         method: "GET"
@@ -90,6 +91,7 @@ function forecast(userInput) {
             forecastIcon[i] = response.list[i].weather[0].icon;
             forecastTemp[i] = response.list[i].main.temp;
             forecastHum[i] = response.list[i].main.humidity;
+            forecastWind[i] = response.list[i].main.wind;
 
 var newCol2 = $("<div>").attr("class", "col-2");
             rowCards.append(newCol2);
@@ -107,7 +109,7 @@ var newH5 = $("<h5>").attr("class", "card-title").text(moment(forecastDate[i]).f
 var newImg = $("<img>").attr("class", "card-img-top").attr("src", "https://openweathermap.org/img/wn/" + forecastIcon[i] + "@2x.png");
             newCardBody.append(newImg);
 
-var newPTemp = $("<p>").attr("class", "card-text").text("Temp: " + Math.floor(forecastTemp[i]) + "ºC");
+var newPTemp = $("<p>").attr("class", "card-text").text("Temp: " + Math.floor(forecastTemp[i]) + "ºF");
             newCardBody.append(newPTemp);
 
 var newPHum = $("<p>").attr("class", "card-text").text("Humidity: " + forecastHum[i] + " %");

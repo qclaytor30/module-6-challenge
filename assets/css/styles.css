@@ -16,10 +16,6 @@ a {
     padding-left: 30px;
 }
 
-.form-inline {
-    padding-bottom: 10px;
-    padding-left: 30px;
-}
 
 #lastSearch {
     padding-left: 35px;
@@ -33,6 +29,11 @@ a {
 
 #rowWeekDay {
     padding-bottom: 30px;
+}
+
+.form-inline {
+    padding-bottom: 10px;
+    padding-left: 30px;
 }
 
 .container-fluid {
