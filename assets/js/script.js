@@ -30,20 +30,20 @@ $(document).ready(function () {
 function currentWeather(userInput) {
     mainIcon.empty();
     var queryURL = url + userInput + APIKey;
-    $.ajax ({
+    $.ajax({
         url: queryURL,
         method: "GET"
-    }) .then(function(response){
-var cityInfo = response.name;
-var country = response.sys.country;
-var wind = response.wind.speed;
-var humidity = response.main.humidity;
-var temp = response.main.temp;
-var lon = response.coord.lon;
-var lat = response.coord.lat;
-var icon = response.weather[0].icon;
-var UVindexURL = "https://api.openweathermap.org/data/2.5/uvi?" + "lat=" + lat + "&" + "lon=" + lon + "&APPID=123babda3bc150d180af748af99ad173";
-var newImgMain = $("<img>").attr("class", "card-img-top").attr("src", "https://openweathermap.org/img/wn/" + icon + "@2x.png");
+    }).then(function (response) {
+        var cityInfo = response.name;
+        var country = response.sys.country;
+        var wind = response.wind.speed;
+        var humidity = response.main.humidity;
+        var temp = response.main.temp;
+        var lon = response.coord.lon;
+        var lat = response.coord.lat;
+        var icon = response.weather[0].icon;
+        var UVindexURL = "https://api.openweathermap.org/data/2.5/uvi?" + "lat=" + lat + "&" + "lon=" + lon + "&APPID=123babda3bc150d180af748af99ad173";
+        var newImgMain = $("<img>").attr("class", "card-img-top").attr("src", "https://openweathermap.org/img/wn/" + icon + "@2x.png");
         mainIcon.append(newImgMain);
 
         cityResultText.text(cityInfo + ", " + country + " " + today);
@@ -54,9 +54,9 @@ var newImgMain = $("<img>").attr("class", "card-img-top").attr("src", "https://o
         $.ajax({
             url: UVindexURL,
             method: "GET"
-        }) .then(function(UVindex){
-var UV = UVindex.value;
-var colorUV;
+        }).then(function (UVindex) {
+            var UV = UVindex.value;
+            var colorUV;
             //console.log(UV);
             if (UV <= 3) {
                 colorUV = "green";
@@ -68,7 +68,7 @@ var colorUV;
                 colorUV = "red";
             }
             UVIndexText.empty();
-var UVResultText = $("<p>").attr("class", "card-text").text("UV Index: ");
+            var UVResultText = $("<p>").attr("class", "card-text").text("UV Index: ");
             UVResultText.append($("<span>").attr("class", "uvindex").attr("style", ("background-color: " + colorUV)).text(UV))
             UVIndexText.append(UVResultText);
             cardDisplay.attr("style", "display: flex; width: 98%");
@@ -84,7 +84,7 @@ function forecast(userInput) {
         url: forecastURL,
         method: "GET"
     }).then(function (response) {
-        
+
         for (var i = 0; i < response.list.length; i += 8) {
 
             forecastDate[i] = response.list[i].dt_txt;
@@ -93,26 +93,26 @@ function forecast(userInput) {
             forecastHum[i] = response.list[i].main.humidity;
             forecastWind[i] = response.list[i].main.wind;
 
-var newCol2 = $("<div>").attr("class", "col-2");
+            var newCol2 = $("<div>").attr("class", "col-2");
             rowCards.append(newCol2);
 
-var newDivCard = $("<div>").attr("class", "card text-white bg-primary mb-3");
+            var newDivCard = $("<div>").attr("class", "card text-white bg-primary mb-3");
             newDivCard.attr("style", "max-width: 18rem;")
             newCol2.append(newDivCard);
 
-var newCardBody = $("<div>").attr("class", "card-body");
+            var newCardBody = $("<div>").attr("class", "card-body");
             newDivCard.append(newCardBody);
 
-var newH5 = $("<h5>").attr("class", "card-title").text(moment(forecastDate[i]).format("MMM Do"));
+            var newH5 = $("<h5>").attr("class", "card-title").text(moment(forecastDate[i]).format("MMM Do"));
             newCardBody.append(newH5);
 
-var newImg = $("<img>").attr("class", "card-img-top").attr("src", "https://openweathermap.org/img/wn/" + forecastIcon[i] + "@2x.png");
+            var newImg = $("<img>").attr("class", "card-img-top").attr("src", "https://openweathermap.org/img/wn/" + forecastIcon[i] + "@2x.png");
             newCardBody.append(newImg);
 
-var newPTemp = $("<p>").attr("class", "card-text").text("Temp: " + Math.floor(forecastTemp[i]) + "ºF");
+            var newPTemp = $("<p>").attr("class", "card-text").text("Temp: " + Math.floor(forecastTemp[i]) + "ºF");
             newCardBody.append(newPTemp);
 
-var newPHum = $("<p>").attr("class", "card-text").text("Humidity: " + forecastHum[i] + " %");
+            var newPHum = $("<p>").attr("class", "card-text").text("Humidity: " + forecastHum[i] + " %");
             newCardBody.append(newPHum);
 
             dayForecast.append(fore5);
@@ -122,7 +122,7 @@ var newPHum = $("<p>").attr("class", "card-text").text("Humidity: " + forecastHu
 
 function storeData(userInput) {
     var userInput = $("#searchInput").val().trim().toLowerCase();
-var containsCity = false;
+    var containsCity = false;
 
     if (citiesArray != null) {
         $(citiesArray).each(function (x) {
