@@ -36,7 +36,7 @@
                 <div class="row">
                     <form class="form-inline my-3 mt-sm-0">
                         <input class="form-control mr-sm-2" type="search" placeholder="Search for a City"
-                            aria-label="Search">
+                            aria-label="Search" id="searchInput">
                         <button class="btn btn-outline-dark my-3" type="submit"><i
                                 class="fa-solid fa-bolt-lightning"></i></button>
                     </form>
@@ -54,51 +54,51 @@
             </div>
             <!--Card-->
             <div class="col-lg-8">
-                <div class="row" id="weatherCard">
+                <div class="row" id="allWeather">
                     <div class="card" style="width: 98%;">
-                            <div class="row">
-                                            <div class="col-lg-6">
-                                                <div class="card-body" id="card">
-                                                    <h2 class="card-title" id="cityResult"></h2>
-                                                    <p class="card-text" id="tempResult"></p>
-                                                    <p class="card-text" id="humidityResult"></p>
-                                                    <p class="card-text" id="windResult"></p>
-                                                </div>
-                        
-                                            </div>
-                                                <div class="col-lg-4" id="mainIcon">
-                                                    <!-- Main Icon -->
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 5 Day Forecast -->
-                                    <div class="row" id="row5day">
-                                        <h2 class="forecast">5-Day Forecast:</h2>
-                                    </div>
-                                    <div class="row" id="rowCards">
-                                        <!-- Cards Goes Here -->
-                                    </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="card-body" id="card">
+                                    <h2 class="card-title" id="cityResult"></h2>
+                                    <p class="card-text" id="tempResult"></p>
+                                    <p class="card-text" id="humidityResult"></p>
+                                    <p class="card-text" id="windResult"></p>
                                 </div>
+
+                            </div>
+                            <div class="col-lg-4" id="mainIcon">
+                                <!-- Main Icon -->
                             </div>
                         </div>
-                        
-            <footer>
+                    </div>
+                </div>
+                <!-- 5 Day Forecast -->
+                <div class="row" id="row5day">
+                    <h2 class="forecast">Week Day Forecast:</h2>
+                </div>
+                <div class="row" id="rowCards">
+                    <!-- Cards Goes Here -->
+                </div>
+            </div>
+        </div>
+    </div>
 
-            </footer>
-            <!--jQuery-->
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-                integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-                crossorigin="anonymous"></script>
-            <!--bootsrap js-->
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-                integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-                crossorigin="anonymous"></script>
-            <!--moment js-->
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-            <!--JavaScript-->
-            <script src="./assets/js/script.js"></script>
+    <footer>
+
+    </footer>
+    <!--jQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <!--bootsrap js-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <!--moment js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <!--JavaScript-->
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
