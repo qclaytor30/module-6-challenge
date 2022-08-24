@@ -30,3 +30,13 @@ a {
     padding-top: 43.5px;
     padding-bottom: 30px;
 }
+
+#rowWeekDay {
+    padding-bottom: 30px;
+}
+
+
+
+.container-fluid {
+    padding-bottom: 50px;
+}
