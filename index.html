@@ -42,12 +42,7 @@
                     </form>
 
                     <div class="row" id="lastSearch">
-                        <div class="card" style="width:20rem;">
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">
-
-                                </li>
-                            </ul>
+                        <div class="card" style="width:20rem;" id="buttonsList">
                         </div>
                     </div>
                 </div>
@@ -55,7 +50,7 @@
             <!--Card-->
             <div class="col-lg-8">
                 <div class="row" id="allWeather">
-                    <div class="card" style="width: 98%;">
+                    <div class="card" style="width: 98%;" id="cardDisplay">
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="card-body" id="card">
@@ -63,6 +58,7 @@
                                     <p class="card-text" id="tempResult"></p>
                                     <p class="card-text" id="humidityResult"></p>
                                     <p class="card-text" id="windResult"></p>
+                                    <p class="card-text" id="UVIndexResult"></p>
                                 </div>
 
                             </div>
@@ -72,10 +68,8 @@
                         </div>
                     </div>
                 </div>
-                <!-- 5 Day Forecast -->
-                <div class="row" id="row5day">
-                    <h2 class="forecast">Week Day Forecast:</h2>
-                </div>
+                <!-- Week Day Forecast -->
+                <div class="row" id="row5day"></div>
                 <div class="row" id="rowCards">
                     <!-- Cards Goes Here -->
                 </div>

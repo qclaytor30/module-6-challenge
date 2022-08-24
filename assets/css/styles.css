@@ -28,18 +28,12 @@ a {
 
 #weatherCard {
     padding-top: 43.5px;
-    display: none;
     padding-bottom: 30px;
 }
 
 #rowWeekDay {
     padding-bottom: 30px;
 }
-
-.forecast {
-    display: none;
-}
-
 
 .container-fluid {
     padding-bottom: 50px;
