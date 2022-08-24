@@ -2,6 +2,8 @@
 
 <h1>Weather Dashboard</h1>
 
+<img width="1734" alt="Screen Shot 2022-08-24 at 6 22 44 PM" src="https://user-images.githubusercontent.com/78238394/186534003-ecff53ce-414d-4231-abd5-70c82cd7e69c.png">
+
 <h2>Description</h2>
 <p>The main focus for this challenge was to be able to use third-party APIs to access their data and funtionality to a URL.The Challenge was to build to build a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS.</p>
 
